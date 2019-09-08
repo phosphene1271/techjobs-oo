@@ -13,7 +13,7 @@
         <div class="form-group">
             <label th:for="name">Name</label>
             <input th:field="*{name}" />
-            <div th:errors="*{name}"></div>
+            <div class="alert alert-danger" style="width: 30%;" th:errors="*{name}"></div>
         </div>
 
         <div class="form-group">
@@ -34,6 +34,7 @@
                         th:value="${location.id}"
                         th:text="${location.value}"></option>
             </select>
+            <span class="error"></span>
         </div>
 
         <div class="form-group">

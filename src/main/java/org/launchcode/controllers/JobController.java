@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
@@ -46,7 +47,7 @@ public class JobController {
         // redirect to the job detail view for the new Job.
 
         if (errors.hasErrors()) {
-            return "new/job";
+            return "new-job";
         }
         // create job properties from job form
         String jobName = jobForm.getName();
